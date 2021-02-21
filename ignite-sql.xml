@@ -48,7 +48,7 @@
 
     <property name="communicationSpi">
         <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
-            <property name="messageQueueLimit" value="1024"/>
+            <property name="messageQueueLimit" value="2048"/>
         </bean>
     </property>
 
