@@ -7,44 +7,44 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean id="ignite.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
 
-        <property name="cacheConfiguration">
-            <list>
-                <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="usertable"/>
-                    <property name="atomicityMode" value="ATOMIC"/>
-                    <property name="cacheMode" value="PARTITIONED"/>
-                    <property name="backups" value="1"/>
-                    <property name="writeSynchronizationMode" value="FULL_SYNC"/>
+    <property name="cacheConfiguration">
+        <list>
+            <bean class="org.apache.ignite.configuration.CacheConfiguration">
+                <property name="name" value="usertable"/>
+                <property name="atomicityMode" value="ATOMIC"/>
+                <property name="cacheMode" value="PARTITIONED"/>
+                <property name="backups" value="1"/>
+                <property name="writeSynchronizationMode" value="FULL_SYNC"/>
 
-                     <property name="queryEntities">
-                        <list>
-                            <bean class="org.apache.ignite.cache.QueryEntity">
-                                <property name="keyType" value="java.lang.String"/>
-                                <property name="valueType" value="UsertableType"/>
-                                <property name="tableName" value="usertable"/>
-                                <property name="keyFieldName" value="ycsb_key"/>
-                                <property name="fields">
-                                    <map>
-                                        <entry key="ycsb_key" value="java.lang.String"/>
-                                        <entry key="field0" value="java.lang.String"/>
-                                        <entry key="field1" value="java.lang.String"/>
-                                        <entry key="field2" value="java.lang.String"/>
-                                        <entry key="field3" value="java.lang.String"/>
-                                        <entry key="field4" value="java.lang.String"/>
-                                        <entry key="field5" value="java.lang.String"/>
-                                        <entry key="field6" value="java.lang.String"/>
-                                        <entry key="field7" value="java.lang.String"/>
-                                        <entry key="field8" value="java.lang.String"/>
-                                        <entry key="field9" value="java.lang.String"/>
-                                    </map>
-                                </property>
-                            </bean>
-                        </list>
-                    </property>
+                 <property name="queryEntities">
+                    <list>
+                        <bean class="org.apache.ignite.cache.QueryEntity">
+                            <property name="keyType" value="java.lang.String"/>
+                            <property name="valueType" value="UsertableType"/>
+                            <property name="tableName" value="usertable"/>
+                            <property name="keyFieldName" value="ycsb_key"/>
+                            <property name="fields">
+                                <map>
+                                    <entry key="ycsb_key" value="java.lang.String"/>
+                                    <entry key="field0" value="java.lang.String"/>
+                                    <entry key="field1" value="java.lang.String"/>
+                                    <entry key="field2" value="java.lang.String"/>
+                                    <entry key="field3" value="java.lang.String"/>
+                                    <entry key="field4" value="java.lang.String"/>
+                                    <entry key="field5" value="java.lang.String"/>
+                                    <entry key="field6" value="java.lang.String"/>
+                                    <entry key="field7" value="java.lang.String"/>
+                                    <entry key="field8" value="java.lang.String"/>
+                                    <entry key="field9" value="java.lang.String"/>
+                                </map>
+                            </property>
+                        </bean>
+                    </list>
+                </property>
 
-                </bean>
-            </list>
-        </property>
+            </bean>
+        </list>
+    </property>
 
     <property name="communicationSpi">
         <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
